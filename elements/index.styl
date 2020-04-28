@@ -1,0 +1,91 @@
+@require "../support"
+
+//文本样式
+@import "./text"
+//背景颜色
+@import "./background"
+//表单控件
+@import "./control"
+//按钮
+@import "./button"
+//警示框
+@import "./alert"
+//详细框
+@import "./message"
+//详细框
+@import "./confirm"
+//小提示
+@import "./hint"
+//弹窗
+@import "./modal"
+//表单组件样式
+@import "./form"
+//选框
+@import "./checkbox"
+//地区选择器
+@import "./regionSelector"
+//文章
+@import "./article"
+//验证码
+@import "./captcha"
+//进度条
+@import "./progress"
+//分割线
+@import "./divider"
+//其他
+@import "./others"
+
+
+
+/**
+ * main-hr
+ * @type {[带文字的分割线]}
+ */
+.main-hr {position:relative;text-align:center;}
+.main-hr:before {position:absolute;top:50%;left:0;width:100%;height:1px;content:"";background:#ddd;}
+.main-hr-txt {position:relative;z-index:2;background:#fff;display:inline-block;padding:0 10px;color:#999;font-size:12px;}
+.main-hr-left {text-align:left;}
+.main-hr-left .main-hr-txt {padding-left:0;}
+.main-hr-right {text-align:right;}
+.main-hr-right .main-hr-txt {padding-right:0;}
+
+
+
+body .main-loading-content
+	position: relative
+	overflow: hidden
+	min-height: 300px
+	&>*
+		opacity: 0.1
+	&:before
+		display: block
+		visibility: visible
+		content: ""
+		position: absolute
+		z-index: 100
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: no-repeat center center url("../images/public/loading.svg")
+
+
+
+/**
+ * main-tree
+ */
+.main-tree {line-height:20px;font-size:15px;}
+.main-tree .items {position:relative;}
+.main-tree .item {margin:10px 0;}
+.main-tree .items:before {content:"";position:absolute;top:-9px;left:-20px;width:1px;height:100%;background:#ddd;}
+.main-tree>.items:first-child:after {content:"";position:absolute;top:-9px;left:-20px;width:1px;height:14px;background:#fff;}
+.main-tree>.items .item:last-child>.items:after {content:"";position:absolute;top:-14px;left:-45px;width:1px;height:100%;padding-bottom:5px;background:#fff;}
+.main-tree .main-tree-face {position:relative;}
+.main-tree .main-tree-face:before {content:"";position:absolute;top:50%;left:-19px;width:15px;height:1px;background:#ddd;}
+.main-tree-title {min-width:100px;white-space:nowrap;text-overflow:ellipsis;}
+.main-tree>.items .items {display:none;margin-left:25px;}
+.main-tree .item.active>.items {display:block;}
+.main-tree-checkbox {position:absolute;z-index:10;top:50%;left:-25px;margin-top:-5px;width:9px;height:9px;border:1px solid #999;cursor:pointer;background:#fff;}
+.main-tree-checkbox:before {content:"";position:absolute;top:4px;left:1px;height:1px;width:7px;background:#999;}
+.main-tree-checkbox:after {content:"";position:absolute;top:1px;left:4px;height:7px;width:1px;background:#999;}
+.main-tree .item.active>.main-tree-face>.main-tree-checkbox:after {display:none;}

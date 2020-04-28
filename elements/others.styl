@@ -1,0 +1,16 @@
+.Separate-links
+	a
+		position: relative
+		margin-left: 12px
+		&:before
+			content: "·"
+			pointer-events: none
+			color: #333
+			position: absolute
+			top: 0
+			left: -8px
+			font-weight: bold
+		&:first-child
+			margin-left: 0
+			&:before
+				display: none

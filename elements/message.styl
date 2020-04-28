@@ -1,0 +1,58 @@
+.Message
+	position: fixed
+	z-index: $zIndex['9']
+	top: 0
+	left: 50%
+	width: 100%
+	max-width: 360px
+	min-height: 40px
+	padding: 10px 40px 10px 10px
+	background: $color_gray_4
+	transition: all 0.3s ease-in-out
+	border-radius: $borderRadius['sm']
+	box-shadow: $shadows['window']
+	transform: translate(-50%, -150%)
+	&.active
+		top: 5%
+		transform: translate(-50%, 0)
+	&-inner
+		min-height: 20px
+		color: #fff
+		line-height: 20px
+	&-close
+		position: absolute
+		top: 0
+		right: 0
+		cursor: pointer
+		width: 40px
+		height: 40px
+		text-align: center
+		line-height: 40px
+		color: #fff
+		font-size: 14px
+	&-success
+		background: $color_green_5
+	&-warning
+		background: $color_yellow_5
+		.Message-inner
+			color: #333
+		.Message-close
+			color: #333
+	&-danger
+		background: $color_red_5
+
+.Message-super
+	left: 0
+	transform: translate(0, -100%)
+	max-width: 100%
+	border-radius: 0
+	box-shadow: none
+	padding-top: 15px
+	padding-bottom: 15px
+	&.active
+		top: 0
+		transform: translate(0, 0)
+	.Message-inner
+		text-align: center
+	.Message-close
+		top: 5px

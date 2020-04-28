@@ -1,0 +1,35 @@
+.Checkbox
+	position: relative
+	line-height: 20px
+	padding-left: 14px
+	cursor: pointer
+	&.active
+		.Checkbox-box
+			background: $color_blue_4
+			border: none
+			box-shadow: none
+			i
+				display: block
+	&-box
+		position: absolute
+		top: 50%
+		left: 0
+		margin-top: -7px
+		width: 14px
+		height: 14px
+		background-color: $color_gray_1
+		border: 1px solid $borderColor['form']
+		box-shadow: $shadows['control']
+		border-radius: 2px
+		i
+			display: none
+			position: absolute
+			top: 1px
+			left: 1px
+			font-size: 12px
+			color: #fff
+	&-text
+		padding-left: 8px
+		user-select: none
+	&>input
+		display: none

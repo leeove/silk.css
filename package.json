@@ -1,0 +1,19 @@
+{
+  "name": "@leeove/silk.css",
+  "version": "1.0.0",
+  "description": "silk.css",
+  "main": "index.styl",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sytana/silk.css.git"
+  },
+  "keywords": ["silk.css", "css"],
+  "author": "sytana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sytana/silk.css/issues"
+  },
+  "homepage": "https://github.com/sytana/silk.css#readme"
+}

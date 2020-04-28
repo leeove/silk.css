@@ -1,0 +1,49 @@
+.Alert
+	display: flex
+	position: relative
+	width: 100%
+	padding: 1em
+	color: $color_gray_9
+	background-color: darken($color_gray_1, 2%)
+	border-radius: $borderRadius['sm']
+	border: 1px solid darken($color_gray_1, 8%)
+	&>.inner
+		width: 100%
+	&-close
+		width: 20px
+		height: 20px
+		line-height: 20px
+		font-size: 12px
+		margin-left: 1em
+		cursor: pointer
+		opacity: 0.5
+		&:hover
+			opacity: 1
+	&-sm
+		font-size: 13px
+		padding: 0.8em
+		
+	&-primary, &-success, &-warning, &-danger
+		a
+			color: inherit
+			text-decoration underline
+			&:hover
+				text-decoration none
+			
+	&-primary
+		color: $color_blue_9
+		background-color: darken($color_blue_1, 2%)
+		border-color: darken($color_blue_1, 8%)
+	&-success
+		color: $color_green_9
+		background-color: darken($color_green_1, 5%)
+		border-color: darken($color_green_1, 15%)
+	&-warning
+		color: $color_yellow_9
+		background-color: darken($color_yellow_1, 5%)
+		border-color: darken($color_yellow_1, 22%)
+	&-danger
+		color: $color_red_9
+		background-color: darken($color_red_1, 2%)
+		border-color: darken($color_red_1, 8%)
+		

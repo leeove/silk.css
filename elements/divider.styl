@@ -1,0 +1,21 @@
+.Divider
+	display: flex
+	width: 100%
+	margin-top: 25px
+	height: auto
+	justify-content: center
+	align-items: center
+	&:before, &:after
+		content: ""
+		flex: 1
+		height: 1px
+		background: darken($color_gray_3, 3%)
+	&.active
+		margin: 25px 0
+	&>.inner
+		max-width: 66.6666%
+		text-align: center
+		margin: 0 1em
+		line-height: 20px
+		color: $color_gray_6
+			
