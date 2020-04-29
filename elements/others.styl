@@ -1,15 +1,18 @@
 .Separate-links
 	a
 		position: relative
-		margin-left: 12px
+		margin-left: 14px
 		&:before
-			content: "·"
+			content: ""
 			pointer-events: none
-			color: #333
 			position: absolute
-			top: 0
+			top: 50%
 			left: -8px
-			font-weight: bold
+			width: 2px
+			height: 2px
+			margin-top: -1px
+			border-radius: 50%
+			background: $color_gray_6
 		&:first-child
 			margin-left: 0
 			&:before
