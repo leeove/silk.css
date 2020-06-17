@@ -20,10 +20,23 @@ body
 article, aside, footer, header, main, menu, nav, section
 	display: block
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 	font-weight: 500
 	margin-top: 0
 	margin-bottom: 0
+	
+h1, .h1
+	font-size: 24px
+h2, .h2
+	font-size: 22px
+h3, .h3
+	font-size: 20px
+h4, .h4
+	font-size: 18px
+h5, .h5
+	font-size: 16px
+h6, .h6
+	font-size: 14px
 
 p
 	margin-top: 0
@@ -220,7 +233,7 @@ input, select, textarea
 	display: inline-block
 	padding: 0
 	position: relative
-	top: -0.2rem
+	top: -0.1rem
 	border: 1px solid $color_gray_4
 	box-shadow: none
 	

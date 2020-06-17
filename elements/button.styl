@@ -1,12 +1,8 @@
-a_nots(color = inherit)
-	&:not([href]):not([tabindex]), &:not([href]):not([tabindex]):hover, &:not([href]):not([tabindex]):focus
-		color: color
-
 .btn
 	height: 32px
 	line-height: 20px
 	padding: 5px 12px
-	color: inherit
+	color: $color_gray_9
 	border: 1px solid $color_gray_3
 	background-color: $color_gray_1
 	border-radius: $borderRadius['sm']
@@ -15,7 +11,6 @@ a_nots(color = inherit)
 	cursor: pointer
 	user-select: none
 	box-shadow: none
-	a_nots()
 	&:hover
 		text-decoration: none
 		background-color: darken($color_gray_1, 3%)
@@ -23,7 +18,6 @@ a_nots(color = inherit)
 	&:active
 		box-shadow: inset 0 0.1em 0.3em alpha($color_gray_9, 0.15)
 	&:focus
-		color: inherit
 		box-shadow: 0 0 0 0.2em darken($color_gray_1, 3%)
 		
 	i
@@ -44,7 +38,6 @@ a_nots(color = inherit)
 		color: $color_white
 		background-color: $color_blue_4
 		border-color: transparent
-		a_nots($color_white)
 		&:hover
 			background-color: darken($color_blue_4, 10%)
 			border-color: transparent
@@ -57,7 +50,6 @@ a_nots(color = inherit)
 		color: $color_white
 		background-color: $color_green_4
 		border-color: transparent
-		a_nots($color_white)
 		&:hover
 			background-color: darken($color_green_4, 10%)
 			border-color: transparent
@@ -70,7 +62,6 @@ a_nots(color = inherit)
 		color: $color_gray_9
 		background-color: $color_yellow_5
 		border-color: transparent
-		a_nots($color_gray_9)
 		&:hover
 			background-color: darken($color_yellow_5, 18%)
 			border-color: transparent
@@ -83,7 +74,6 @@ a_nots(color = inherit)
 		color: $color_white
 		background-color: $color_red_4
 		border-color: transparent
-		a_nots($color_white)
 		&:hover
 			background-color: darken($color_red_4, 10%)
 			border-color: transparent
