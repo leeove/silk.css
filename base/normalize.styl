@@ -16,6 +16,7 @@ body
 	min-height: 100%
 	background-color: $color_white
 	-webkit-font-smoothing: antialiased
+	-moz-font-smoothing: antialiased
 
 article, aside, footer, header, main, menu, nav, section
 	display: block
@@ -151,10 +152,15 @@ th, td
 	padding: 5px 8px
 	
 th
-	background: $color_gray_1
+	background: darken($color_gray_1, 3%)
 	
 td
 	color: $color_gray_6
+	
+tr
+	&:hover
+		td
+			background: $color_gray_1
 
 label
 	display: inline-block
@@ -253,7 +259,7 @@ button, [type="button"], [type="reset"], [type="submit"]
 button, select
 	text-transform: none
 
-select
+select, .select
 	select()
 	word-wrap: normal
 	background-color: $color_white
@@ -263,9 +269,9 @@ button, input
 	overflow: visible
 	resize: none
 
-::placeholder
+::placeholder, .placeholder
 	color: inherit
-	opacity: 0.5
+	opacity: 0.6
 	font-family: inherit
 	font-weight: inherit
 	

@@ -3,6 +3,7 @@
 		position: relative
 		display: inline-block
 		margin-left: 14px
+		user-select: none
 		&:before
 			content: ""
 			pointer-events: none
@@ -18,3 +19,9 @@
 			margin-left: 0!important
 			&:before
 				display: none
+
+//单行省略
+.Single-line
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis

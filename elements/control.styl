@@ -3,7 +3,9 @@
 	line-height: 20px
 	padding:5px 8px
 	background-color: $color_gray_1
-	&:focus
+	border: 1px solid $borderColor['form']
+	border-radius: $borderRadius['sm']
+	&:focus, &-focus
 		border-color: $color_blue_4
 		box-shadow: 0 0 0 1px $color_blue_4
 		background-color: #fff
@@ -16,7 +18,6 @@
 		font-size: 15px
 		height: 40px
 		padding: 9px 12px
-	
 
 [type="radio"].control, [type="checkbox"].control, [type="radio"].control-sm, [type="checkbox"].control-sm
 	height: auto
@@ -34,12 +35,23 @@ textarea
 
 select.control[multiple], select.control-sm[multiple]
 	height: auto
+	
+select.control, .select.control
+	background-position: right 8px center
+	padding-right: 24px
+	&-sm
+		background-position: right 5px center
+		padding-right: 18px
+	&-lg
+		background-position: right 12px center
+		padding-right: 32px
 
 label.control
 	background: none
 	height: auto
 	line-height: 32px
 	padding: 0
+	border: none
 	&-sm
 		height: auto
 		line-height: 26px

@@ -1,0 +1,49 @@
+.Selector
+	position: relative
+	display: inline-block
+	min-width: 150px
+	user-select: none
+	&.active
+		.Selector-content
+			visibility: visible
+			opacity: 1
+			transform: translate(0)
+	&>.control
+		height: auto
+		min-height: 32px
+		max-height: 12px + 20px * 8
+		&>.placeholder
+			pointer-events: none
+	&-content
+		position: absolute
+		z-index: 1
+		top: 100%
+		left: 0
+		min-width: 100%
+		margin-top: 4px
+		background: $color_gray_1
+		border-radius: $borderRadius['sm']
+		box-shadow: $shadows['dropdown']
+		transition: all 0.15s ease-in-out
+		visibility: hidden
+		opacity: 0
+		transform: translate(0, -10px)
+	&-list
+		padding: 5px 0
+		max-height: 400px
+		overflow: auto
+		li
+			position: relative
+			line-height: 20px
+			padding: 3px 10px 3px 22px
+			white-space: nowrap
+			cursor: default
+			&:hover
+				background-color: $color_blue_4
+				color: #fff
+			i
+				position: absolute
+				top: 50%
+				left: 5px
+				margin-top: -7px
+				font-size: 14px

@@ -1,0 +1,83 @@
+.Dropdown
+	position: relative
+	&:not(.disabled):not([disabled]):hover
+		.Dropdown-content
+			visibility: visible
+			opacity: 1
+			margin-top: 15px
+	&-content
+		position: absolute
+		z-index: 2
+		top: 100%
+		left: 50%
+		transform: translate(-50%, 0)
+		min-width: 80px
+		min-height: 30px
+		margin-top: 20px
+		transition: all 0.15s ease-in-out
+		visibility: hidden
+		opacity: 0
+		background: #fff
+		border-radius: $borderRadius['sm']
+		box-shadow: $shadows['dropdown']
+		&:before
+			position: absolute
+			content: ""
+			top: -20px
+			left: 50%
+			margin-left: -10px
+			border: 10px solid transparent
+			border-bottom-color: #fff
+			pointer-events: none
+		&:after
+			position: absolute
+			content: ""
+			top: -15px
+			left: 0
+			height: 15px
+			width: 100%
+	&-left
+		.Dropdown-content
+			left: 0
+			transform: translate(0)
+			&:before
+				left: 25%
+				margin-left: 0
+	&-up
+		&:not(.disabled):not([disabled]):hover
+			.Dropdown-content
+				margin-top: 0
+				margin-bottom: 15px
+		.Dropdown-content
+			top: auto
+			bottom: 100%
+			margin-top: 0
+			margin-bottom: 20px
+			&:before
+				top: auto
+				bottom: -20px
+				border-bottom-color: transparent
+				border-top-color: #fff
+			&:after
+				top: auto
+				bottom: -20px
+	&-right
+		.Dropdown-content
+			left: auto
+			right: 0
+			transform: translate(0)
+			&:before
+				left: auto
+				right: 25%
+				margin-left: 0
+	&-list
+		padding: 10px 0
+		li
+			font-size: 14px
+			color: $color_gray_5
+			line-height: 20px
+			padding: 8px 15px
+			cursor: pointer
+			&:hover
+				color: $color_gray_8
+				background: $color_gray_1

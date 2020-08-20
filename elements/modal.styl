@@ -42,6 +42,9 @@ active_b()
 	&.Modal-lg
 		.Modal-content
 			max-width: 960px
+	&-animate
+		animation: modal-animate 0.18s 0s 1 alternate linear
+		animation-fill-mode: forwards
 
 .Modal-background
 	position: absolute
@@ -134,3 +137,18 @@ active_b()
 	&>.btn
 		margin-left: 6px
 		min-width: 80px
+
+
+
+// animation
+@keyframes modal-animate {
+	0% {
+		transform: scale(1)
+	}
+	75% {
+		transform: scale(1.02)
+	}
+	100% {
+		transform: scale(1)
+	}
+}
