@@ -2,7 +2,7 @@
   "name": "@leeove/silk.css",
   "version": "1.0.7",
   "description": "silk.css",
-  "main": "index.styl",
+  "main": "src/index.styl",
   "scripts": {},
   "repository": {
     "type": "git",
@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/sytana/silk.css/issues"
   },
-  "homepage": "https://github.com/sytana/silk.css#readme"
+  "homepage": "https://github.com/sytana/silk.css#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^4.1.10"
+  }
 }
