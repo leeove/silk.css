@@ -36,12 +36,6 @@ active_b()
 	&.Modal-upper
 		.Modal-content
 			top: 15%
-	&.Modal-sm
-		.Modal-content
-			max-width: 360px
-	&.Modal-lg
-		.Modal-content
-			max-width: 960px
 	&-animate
 		animation: modal-animate 0.18s 0s 1 alternate linear
 		animation-fill-mode: forwards
@@ -87,6 +81,7 @@ active_b()
 	position: relative
 	top: 5%
 	width: 100%
+	min-width: 360px
 	max-width: 640px
 	max-height: 95%
 	margin: 0 auto
