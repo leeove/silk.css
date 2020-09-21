@@ -1,7 +1,7 @@
 {
   "name": "@leeove/silk.css",
   "version": "1.0.7",
-  "description": "silk.css",
+  "description": "@leeove/silk.css",
   "main": "src/index.styl",
   "scripts": {},
   "repository": {
