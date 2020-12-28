@@ -1,5 +1,6 @@
 .DTPicker
 	.Modal-content
+		min-width: auto
 		width: auto
 
 .DTPicker-content
@@ -37,35 +38,39 @@
 		margin-left: 10px
 	table
 		border: none
-		th, td
-			text-align: center
-			user-select: none
-			width: 36px
-			line-height: 36px
-			padding: 0
-			border: none
-		th
-			background: none
-		td
-			color: $color_gray_9
-			cursor: pointer
-			border-radius: 5px
+		tr
 			&:hover
-				background: darken($color_gray_1, 2%)
-			&.DTPicker-calendar-notm
-				color: $color_gray_4
-			&.DTPicker-calendar-tmcd
-				color: $color_green_5
-				font-size: 12px
-				font-weight: bold
-			&.DTPicker-calendar-tmce, &.DTPicker-calendar-tmcs
-				color: #fff
-				background: $color_blue_4
-			&.DTPicker-calendar-tmci
-				background: alpha($color_blue_1, 0.5)
-				border-radius: 0
-			&.DTPicker-calendar-tmcs.DTPicker-calendar-tmce
+				td
+					background: inherit
+			th, td
+				text-align: center
+				user-select: none
+				width: 36px
+				line-height: 36px
+				padding: 0
+				border: none
+			th
+				background: none
+			td
+				color: $color_gray_9
+				cursor: pointer
 				border-radius: 5px
+				&:hover
+					background: darken($color_gray_1, 2%)
+				&.DTPicker-calendar-notm
+					color: $color_gray_4
+				&.DTPicker-calendar-tmcd
+					color: $color_green_5
+					font-size: 12px
+					font-weight: bold
+				&.DTPicker-calendar-tmce, &.DTPicker-calendar-tmcs
+					color: #fff
+					background: $color_blue_4
+				&.DTPicker-calendar-tmci
+					background: alpha($color_blue_1, 0.5)
+					border-radius: 0
+				&.DTPicker-calendar-tmcs.DTPicker-calendar-tmce
+					border-radius: 5px
 
 .DTPicker-calendar-hasend
 	table
