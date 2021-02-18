@@ -1,29 +1,29 @@
 /* 表单行样式
 ==================================================== */
+$control_height = 40px
+
 .Form-rows
 	&>.Form-row:last-child
 		margin-bottom: 0
 .Form-row
 	position: relative
 	display: flex
-	margin-bottom: 15px
+	margin-bottom: 20px
 	&.is-require
 		.Form-row-field:before
-			content: "*"
+			content: "＊"
 			display: inline-block
 			position: relative
-			top: 0.15em
-			left: 0
-			margin-right: 3px
+			left: -3px
 			font-size: inherit
 			color: $color_red_5
-			pointer-events: none
+			user-select: none
 			font-weight: bold
 	&-field
 		flex-shrink:0;
-		min-width: 111px
-		min-height: 32px
-		line-height: 32px
+		min-width: 16px * 5
+		min-height: $control_height
+		line-height: $control_height
 		font-size: 16px
 		padding-right: 15px
 		box-sizing: content-box
@@ -31,36 +31,33 @@
 		text-align: right
 	&-value
 		position: relative
-		min-height: 32px
+		min-height: $control_height
 		width: 100%
 		&>label.control
-			margin-left: 10px
-			&:first-child
-				margin-left: 0
 			.control
-				margin-right: 8px
+				margin-right: 5px
+		&>.btn.sm
+			margin-top: 4px
 	&-error
 		font-size: 13px
-		font-weight: 600
+		font-weight: 500
 		color: $color_red_5
-		min-height: 18px
-		line-height: 18px
+		min-height: 20px
+		line-height: 20px
 		margin-top: 5px
 	&-checkboxes
 		display: flex
-		padding: 6px 0
 		.Checkbox+.Checkbox
 			margin-left: 30px
 
 /* 图片选择框
 ==================================================== */
 .Form-upimg-default
-	border: 1px solid $color_gray_3
+	border: 1px solid transparent
 	cursor: pointer
 	height: 100px
 	width: 100px
-	background-color: $color_gray_1
-	box-shadow: $shadows['control']
+	background-color: darken($color_gray_1, 3%)
 	&>.inner
 		position: relative
 		width: 96px
@@ -91,7 +88,7 @@
 		&:before, &:after
 			position: absolute
 			content: ""
-			background: $color_gray_3
+			background: darken($color_gray_1, 15%)
 		&:before
 			width: 32px
 			height: 2px
@@ -105,10 +102,10 @@
 	[type="file"]
 		display: none
 	&:hover
-		border-color: darken($color_gray_3, 10%)
+		border-color: darken($color_gray_1, 25%)
 		.Form-upimg-default-place
 			&:before, &:after
-				background: darken($color_gray_3, 10%)
+				background: darken($color_gray_1, 25%)
 
 .Form-upimg-control
 	display: flex
@@ -124,8 +121,8 @@
 	&>.item
 		position: relative
 		display: flex
-		line-height: 32px
-		padding: 13px 10px
+		line-height: $control_height
+		padding: 15px 10px
 		border-bottom: 1px solid $color_gray_2
 		&:first-child
 			border-top: 1px solid $color_gray_2
@@ -138,9 +135,9 @@
 		color: $color_gray_6
 		word-break: break-all
 		&-colorbar
-			margin-top: 4px
-			height: 24px
-			line-height: 24px
+			margin-top: 5px
+			height: 30px
+			line-height: 30px
 			text-align: center
 			color: #fff
 			text-shadow: 1px 1px 0 rgba(0,0,0,0.3)
@@ -151,12 +148,11 @@
 		&>.inner
 			display: flex
 			align-items: flex-start
-			.item-input
+			.control
 				flex: 1 0 0
-			.item-ok
-				margin-left: 5px
-			.item-cancel
-				margin-left: 5px
+			.btn
+				margin-left: 8px
 	.item-edit
 		margin-left: 15px
 		text-align: right
+		user-select: none

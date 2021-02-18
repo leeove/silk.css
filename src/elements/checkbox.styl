@@ -1,7 +1,7 @@
 .Checkbox
 	position: relative
-	line-height: 20px
-	padding-left: 14px
+	line-height: 22px
+	padding: 9px 0 9px 14px
 	cursor: pointer
 	&.active
 		.Checkbox-box
@@ -10,6 +10,16 @@
 			box-shadow: none
 			i
 				display: block
+				
+	&.sm
+		line-height: 20px
+		padding-top: 6px
+		padding-bottom: 6px
+	&.lg
+		line-height: 24px
+		padding-top: 14px
+		padding-bottom: 14px
+
 	&-box
 		position: absolute
 		top: 50%
