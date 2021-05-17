@@ -22,11 +22,9 @@ active_b()
 	width: 100%
 	height: 100%
 	z-index: $zIndex['6']
-	&.active-a
+	&[data-active="loading"]
 		active_a()
-	&.active-b
-		active_b()
-	&.active
+	&[data-active="loaded"]
 		active_a()
 		active_b()
 	&.Modal-center
@@ -138,14 +136,11 @@ active_b()
 
 
 // animation
-@keyframes modal-animate {
-	0% {
+@keyframes modal-animate
+	0%
 		transform: scale(1)
-	}
-	75% {
+		
+	75%
 		transform: scale(1.02)
-	}
-	100% {
+	100%
 		transform: scale(1)
-	}
-}

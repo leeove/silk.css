@@ -4,6 +4,16 @@
 	line-height: 16px
 	min-height: 16px
 	margin: 5px 0 0
+	transition: background-color 0.3s ease-in-out
 	&:empty
 		background-color: darken($color_gray_1, 3%)
 		border-radius: $borderRadius['sm']
+		animation: hint-empty 1.4s infinite
+			
+@keyframes hint-empty
+	0%
+		opacity: 0.8
+	25%
+		opacity: 0.5
+	100%
+		opacity: 1
