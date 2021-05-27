@@ -89,6 +89,15 @@ active_b()
 	opacity: 0
 	transform: translate(0, 15px)
 	background-color: rgba(250,250,250,0.98)
+	hr
+		height: 2px
+		border-top: 1px solid $borderColor['modal']
+		border-bottom: 1px solid #fff
+	.Divider:before, .Divider:after
+		height: 2px
+		background: none
+		border-top: 1px solid $borderColor['modal']
+		border-bottom: 1px solid #fff
 
 .Modal-header
 	padding: 15px
@@ -113,13 +122,15 @@ active_b()
 .Modal-body
 	padding: 20px
 	overflow: auto
+	border-top: 1px solid #fff
+	border-bottom: 1px solid $borderColor['modal']
 	
 .Modal-footer
 	display: flex
 	justify-content: flex-end
 	line-height: 20px
 	padding: 15px
-	border-top: 1px solid $borderColor['modal']
+	border-top: 1px solid #fff
 	&-left
 		width: 100%
 		line-height: 32px

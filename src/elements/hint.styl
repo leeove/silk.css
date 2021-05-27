@@ -1,14 +1,16 @@
 .Hint
 	font-size: 13px
 	color: $color_gray_5
-	line-height: 16px
-	min-height: 16px
+	line-height: 20px
+	min-height: 20px
 	margin: 5px 0 0
 	transition: background-color 0.3s ease-in-out
 	&:empty
-		background-color: darken($color_gray_1, 3%)
-		border-radius: $borderRadius['sm']
-		animation: hint-empty 1.4s infinite
+		&:before
+			content: "......"
+		// background-color: darken($color_gray_1, 3%)
+		// border-radius: $borderRadius['sm']
+		// animation: hint-empty 1.4s infinite
 			
 @keyframes hint-empty
 	0%
