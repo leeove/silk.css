@@ -1,6 +1,7 @@
 /* 表单行样式
 ==================================================== */
-$control_height = 40px
+$control_h = 40px
+$control_h_sm = 32px
 
 .Form-rows
 	&>.Form-row:last-child
@@ -9,6 +10,8 @@ $control_height = 40px
 	position: relative
 	display: flex
 	margin-bottom: 20px
+	&:last-child
+		margin-bottom: 0!important
 	&.is-require
 		.Form-row-field:before
 			content: "＊"
@@ -22,8 +25,8 @@ $control_height = 40px
 	&-field
 		flex-shrink:0;
 		min-width: 16px * 7
-		min-height: $control_height
-		line-height: $control_height
+		min-height: $control_h
+		line-height: $control_h
 		font-size: 16px
 		padding-right: 15px
 		box-sizing: content-box
@@ -31,7 +34,7 @@ $control_height = 40px
 		text-align: right
 	&-value
 		position: relative
-		min-height: $control_height
+		min-height: $control_h
 		width: 100%
 		&>label.control
 			.control
@@ -49,6 +52,15 @@ $control_height = 40px
 		display: flex
 		.Checkbox+.Checkbox
 			margin-left: 30px
+			
+	&.sm
+		margin-bottom: 15px
+		.Form-row-field
+			font-size: 14px
+			min-height: $control_h_sm
+			line-height: $control_h_sm
+		.Form-row-value
+			min-height: $control_h_sm
 
 /* 图片选择框
 ==================================================== */
@@ -122,7 +134,7 @@ $control_height = 40px
 	&>.item
 		position: relative
 		display: flex
-		line-height: $control_height
+		line-height: $control_h
 		padding: 15px 10px
 		border-bottom: 1px solid $color_gray_2
 		&:first-child
