@@ -3,6 +3,29 @@
 $control_h = 40px
 $control_h_sm = 32px
 
+
+.Form-search
+	display: flex
+	max-width: 640px
+	margin: 0 auto
+	.control
+		flex: 1
+		height: 44px
+		padding: 0 10px
+		line-height: 40px
+		border-width: 2px
+		border-right: none
+		border-top-right-radius: 0
+		border-bottom-right-radius: 0
+		&:focus
+			box-shadow: none
+	.btn
+		line-height: 26px
+		min-width: 80px
+		border-top-left-radius: 0
+		border-bottom-left-radius: 0
+
+
 .Form-rows
 	&>.Form-row:last-child
 		margin-bottom: 0
@@ -61,6 +84,7 @@ $control_h_sm = 32px
 			line-height: $control_h_sm
 		.Form-row-value
 			min-height: $control_h_sm
+
 
 /* 图片选择框
 ==================================================== */
@@ -129,6 +153,7 @@ $control_h_sm = 32px
 		margin-left: 5px
 	[type="file"]
 		display: none
+
 
 .Form-modifiers
 	&>.item
